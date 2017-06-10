@@ -1,0 +1,73 @@
+body, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+body {
+  margin: 0;
+  background-color: tomato; }
+  body #particles-js {
+    position: absolute;
+    background: #222222;
+    height: 100vh;
+    width: 100%;
+    z-index: -999; }
+  body .navbar {
+    height: 80px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    margin: 0; }
+    body .navbar .container-fluid {
+      max-width: 1000px; }
+      body .navbar .container-fluid .navbar-brand {
+        color: white;
+        height: 80px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-weight: 700;
+        font-style: italic; }
+      body .navbar .container-fluid ul li a {
+        color: #dbdbdb;
+        height: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 18px;
+        font-weight: 400; }
+        body .navbar .container-fluid ul li a:hover {
+          color: white; }
+      body .navbar .container-fluid ul li:nth-child(1) a:hover {
+        border-bottom: 2px solid crimson; }
+      body .navbar .container-fluid ul li:nth-child(2) a:hover {
+        border-bottom: 2px solid darkslateblue; }
+      body .navbar .container-fluid ul li:nth-child(3) a:hover {
+        border-bottom: 2px solid gold; }
+      body .navbar .container-fluid ul li:nth-child(4) a:hover {
+        border-bottom: 2px solid dodgerblue; }
+      body .navbar .container-fluid ul li:nth-child(5) a:hover {
+        border-bottom: 2px solid tomato; }
+  body header {
+    height: 100vh;
+    text-align: center;
+    background: transparent; }
+    body header h1 {
+      padding-top: 40vh;
+      text-align: center;
+      color: gold;
+      font-weight: 700; }
+    body header h3 {
+      margin-top: 30px;
+      margin-bottom: 5vh;
+      text-align: center;
+      color: #dbdbdb;
+      line-height: 40px; }
+    body header a {
+      text-align: center;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background: crimson;
+      transition: all 300ms ease-in-out; }
+      body header a:hover {
+        border: 2px solid white;
+        background: transparent; }
+
+/*# sourceMappingURL=main.css.map */
