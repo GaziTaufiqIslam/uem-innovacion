@@ -3,3 +3,43 @@ particlesJS.load('particles-js',
  function() {
   console.log('callback - particles.js config loaded');
 });
+
+$(document).ready(function() {
+  $(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
+    var winH = $(window).height();
+
+    if(wScroll > 80) {
+
+      //$('.navbar').addClass('show');
+$('.navbar').removeClass('hiddenNav');
+    }
+    else {
+
+      //$('.navbar').removeClass('show');
+      $('.navbar').addClass('hiddenNav');
+    }
+
+    if(wScroll > 20) {
+
+      //$('.navbar').addClass('show');
+    $('.navbar').removeClass('thick');
+    }
+    else {
+
+      //$('.navbar').removeClass('show');
+      $('.navbar').addClass('thick');
+    }
+
+    if(wScroll > $('#about').offset().top-($(window).height())){
+      $('#about').css({'background-position': 'center '+(-200-(wScroll-($('#about').offset().top)*1.25)/7)+'px'})
+
+    }
+  });
+
+
+
+//new code
+
+
+});

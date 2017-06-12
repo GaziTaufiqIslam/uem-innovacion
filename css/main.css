@@ -1,9 +1,12 @@
 body, h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
+a:hover {
+  text-decoration: none; }
+
 body {
   margin: 0;
-  background-color: tomato; }
+  background-color: salmon; }
   body #particles-js {
     position: absolute;
     background: #222222;
@@ -14,8 +17,9 @@ body {
     height: 80px;
     border: none;
     border-radius: 0;
-    background: transparent;
-    margin: 0; }
+    background: #323232;
+    margin: 0;
+    transition: all 300ms ease-in-out; }
     body .navbar .container-fluid {
       max-width: 1000px; }
       body .navbar .container-fluid .navbar-brand {
@@ -26,48 +30,243 @@ body {
         font-weight: 700;
         font-style: italic; }
       body .navbar .container-fluid ul li a {
-        color: #dbdbdb;
+        color: lightgrey;
         height: 60px;
         padding-top: 30px;
         padding-bottom: 30px;
-        font-size: 18px;
-        font-weight: 400; }
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase; }
         body .navbar .container-fluid ul li a:hover {
           color: white; }
       body .navbar .container-fluid ul li:nth-child(1) a:hover {
         border-bottom: 2px solid crimson; }
       body .navbar .container-fluid ul li:nth-child(2) a:hover {
-        border-bottom: 2px solid darkslateblue; }
+        border-bottom: 2px solid slateblue; }
       body .navbar .container-fluid ul li:nth-child(3) a:hover {
         border-bottom: 2px solid gold; }
       body .navbar .container-fluid ul li:nth-child(4) a:hover {
         border-bottom: 2px solid dodgerblue; }
       body .navbar .container-fluid ul li:nth-child(5) a:hover {
-        border-bottom: 2px solid tomato; }
+        border-bottom: 2px solid salmon; }
+  body .hiddenNav {
+    background: transparent; }
+  body .thick {
+    margin-top: 20px; }
+    body .thick .navbar-brand {
+      opacity: 0; }
   body header {
     height: 100vh;
-    text-align: center;
-    background: transparent; }
+    background: transparent;
+    position: relative; }
     body header h1 {
-      padding-top: 40vh;
+      padding-top: 30vh;
       text-align: center;
       color: gold;
       font-weight: 700; }
+      body header h1 svg {
+        width: 50vw; }
+      @media screen and (max-width: 641px) {
+        body header h1 svg {
+          width: 80vw; } }
     body header h3 {
-      margin-top: 30px;
+      margin-top: 5vh;
       margin-bottom: 5vh;
       text-align: center;
-      color: #dbdbdb;
+      color: grey;
       line-height: 40px; }
     body header a {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      background: crimson;
+      color: crimson;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 20px 100px;
+      border-radius: 2px;
+      box-shadow: 0px -2px 7px black;
       transition: all 300ms ease-in-out; }
       body header a:hover {
-        border: 2px solid white;
-        background: transparent; }
+        background: crimson;
+        color: white;
+        box-shadow: 0px 20px 20px -15px black; }
+  body #about {
+    height: 100vh;
+    background: white;
+    position: relative; }
+    body #about .container {
+      margin: 0 auto;
+      max-width: 600px;
+      padding-top: 18vh; }
+      body #about .container h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: gold;
+        line-height: 10rem;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px grey; }
+      body #about .container p {
+        font-size: 20px;
+        color: grey; }
+  body #events {
+    background: #222222; }
+    body #events .container {
+      padding: 20vh 5vw; }
+      body #events .container h1 {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 700;
+        color: slateblue;
+        line-height: 7rem;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px black; }
+      body #events .container .row {
+        padding: 5vh 0; }
+      body #events .container h3 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 3rem 0;
+        color: grey; }
+      body #events .container .card {
+        height: 50vh;
+        width: 100%;
+        box-shadow: 0px 3px 10px -2px black;
+        background: #222222; }
+        body #events .container .card h2 {
+          text-align: center;
+          line-height: 4vh;
+          padding: 8vh 0;
+          color: white; }
+        body #events .container .card:hover {
+          box-shadow: 0px 15px 30px -15px black; }
+      body #events .container .one h2 {
+        color: gold; }
+      body #events .container .one .illustration {
+        height: 30vh;
+        width: 100%;
+        background-image: url("https://cdn.dribbble.com/users/345022/screenshots/1117101/coding.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+      body #events .container .two h2 {
+        color: crimson; }
+      body #events .container .two .illustration {
+        height: 30vh;
+        width: 100%;
+        background-image: url("https://cdn.dribbble.com/users/30976/screenshots/1918214/flat-nao.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+      body #events .container .three h2 {
+        color: dodgerblue; }
+      body #events .container .three .illustration {
+        height: 30vh;
+        width: 100%;
+        background-image: url("http://st2.depositphotos.com/2215072/6373/v/170/depositphotos_63732503-stock-illustration-vector-bridge-flat-icon.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+      body #events .container .four h2 {
+        color: salmon; }
+      body #events .container .four .illustration {
+        height: 30vh;
+        width: 100%;
+        background-image: url("https://www.colourbox.com/preview/12460751-human-head-idea-vector-concept-illustration-in-flat-design-style-for-business-presentation-brochure-web-site-and-other-projects-human-head-with-light-bulb-gears-and-clouds-infographic-concept.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+      body #events .container .five h2 {
+        color: deeppink; }
+      body #events .container .five .illustration {
+        height: 30vh;
+        width: 100%;
+        background-image: url("https://go.spinweb.net/hs-fs/hub/165655/file-1131507510-png/images/blog/lightbulb-quiz.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+      body #events .container .six h2 {
+        color: mediumspringgreen; }
+      body #events .container .six .illustration {
+        height: 30vh;
+        width: 100%;
+        background-image: url("https://kit8.net/images/thumbnails/700/525/detailed/1/Treasure_chest_flat_vector_illustration.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+  body #venue {
+    height: 100vh;
+    background: pink; }
+    body #venue iframe {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
+    body #venue .contact {
+      width: 100%;
+      background: #222222;
+      color: grey;
+      margin: 15vh auto;
+      max-width: 80%;
+      border-radius: 3px; }
+      body #venue .contact h1 {
+        padding: 2vh 0 0 0;
+        text-align: center; }
+      body #venue .contact .middle {
+        max-width: 80%;
+        margin: 5vh auto; }
+        body #venue .contact .middle h3 {
+          padding-top: 5vh;
+          font-weight: 700;
+          line-height: 5rem;
+          color: salmon; }
+        body #venue .contact .middle form {
+          padding: 20px 0; }
+          body #venue .contact .middle form h4 {
+            color: dodgerblue;
+            font-weight: 700;
+            line-height: 3rem; }
+          body #venue .contact .middle form input, body #venue .contact .middle form textarea {
+            width: 100%;
+            margin: 5px 0;
+            padding: 7px 10px;
+            border: none;
+            background: #525252;
+            outline: none;
+            transition: all 300ms ease-in-out; }
+            body #venue .contact .middle form input:focus, body #venue .contact .middle form textarea:focus {
+              padding: 10px 10px; }
+          body #venue .contact .middle form .submit {
+            background: transparent;
+            box-shadow: 0px 2px 5px black;
+            color: mediumspringgreen;
+            width: 60%;
+            text-align: center;
+            border-radius: 1px; }
+            body #venue .contact .middle form .submit:hover {
+              box-shadow: 0px 10px 10px -5px black;
+              background: mediumspringgreen;
+              color: white; }
+  body footer {
+    padding: 10vh 0 2vh 0;
+    text-align: center;
+    justify-content: center;
+    background: #222222; }
+    body footer h1 {
+      color: gold;
+      font-weight: 700;
+      line-height: 5rem; }
+    body footer .icons a {
+      padding: 5px; }
+    body footer .copyright {
+      margin: 0 auto;
+      max-width: 600px; }
+      body footer .copyright p {
+        color: grey; }
+      body footer .copyright span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: deeppink; }
 
 /*# sourceMappingURL=main.css.map */
