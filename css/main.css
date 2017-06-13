@@ -1,8 +1,12 @@
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, p {
   margin: 0; }
 
 a:hover {
   text-decoration: none; }
+
+a:focus {
+  outline: none;
+  text-decoration: none !important; }
 
 body {
   margin: 0;
@@ -29,26 +33,37 @@ body {
         padding-bottom: 30px;
         font-weight: 700;
         font-style: italic; }
-      body .navbar .container-fluid ul li a {
-        color: lightgrey;
-        height: 60px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase; }
-        body .navbar .container-fluid ul li a:hover {
-          color: white; }
-      body .navbar .container-fluid ul li:nth-child(1) a:hover {
-        border-bottom: 2px solid crimson; }
-      body .navbar .container-fluid ul li:nth-child(2) a:hover {
-        border-bottom: 2px solid slateblue; }
-      body .navbar .container-fluid ul li:nth-child(3) a:hover {
-        border-bottom: 2px solid gold; }
-      body .navbar .container-fluid ul li:nth-child(4) a:hover {
-        border-bottom: 2px solid dodgerblue; }
-      body .navbar .container-fluid ul li:nth-child(5) a:hover {
-        border-bottom: 2px solid salmon; }
+      body .navbar .container-fluid ul li {
+        padding-top: 15px; }
+        body .navbar .container-fluid ul li a {
+          color: lightgrey;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: all 100ms ease-out; }
+          body .navbar .container-fluid ul li a:hover {
+            color: white; }
+        body .navbar .container-fluid ul li .register {
+          color: gold;
+          padding: 15px 30px;
+          box-shadow: 0px -1px 5px -1px black;
+          transition: all 300ms ease-in-out; }
+          body .navbar .container-fluid ul li .register:hover {
+            background: gold;
+            color: white;
+            box-shadow: 2px 10px 10px -5px black; }
+        body .navbar .container-fluid ul li:nth-child(1) a:hover {
+          border-bottom: 2px solid mediumspringgreen; }
+        body .navbar .container-fluid ul li:nth-child(2) a:hover {
+          border-bottom: 2px solid slateblue; }
+        body .navbar .container-fluid ul li:nth-child(3) a:hover {
+          border-bottom: 2px solid gold; }
+        body .navbar .container-fluid ul li:nth-child(4) a:hover {
+          border-bottom: 2px solid dodgerblue; }
+        body .navbar .container-fluid ul li:nth-child(5) a:hover {
+          border-bottom: 2px solid salmon; }
     @media screen and (max-width: 800px) {
       body .navbar .navbar {
         background: #323232; } }
@@ -90,6 +105,9 @@ body {
       border-radius: 2px;
       box-shadow: 0px -2px 7px black;
       transition: all 300ms ease-in-out; }
+      body header a:focus {
+        text-decoration: none !important;
+        color: crimson; }
       body header a:hover {
         background: crimson;
         color: white;
@@ -104,12 +122,12 @@ body {
       body #about .container h1 {
         font-size: 5rem;
         font-weight: 700;
-        color: gold;
+        color: mediumspringgreen;
         line-height: 7rem;
         text-transform: uppercase;
-        text-shadow: 2px 2px 2px grey; }
+        text-shadow: 2px 2px 2px grey;
+        padding-bottom: 2rem; }
       body #about .container p {
-        padding-top: 2rem;
         font-size: 20px;
         color: grey; }
   body #events {
@@ -138,7 +156,10 @@ body {
         height: 50vh;
         width: 100%;
         box-shadow: 0px 0px 7px black;
-        background: #222222; }
+        background: #222222;
+        -webkit-transition: all 0.15s ease-out 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s; }
         body #events .container .card h2 {
           text-align: center;
           line-height: 4vh;
@@ -146,6 +167,8 @@ body {
           color: white; }
         body #events .container .card:hover {
           box-shadow: 0px 15px 50px -10px black; }
+          body #events .container .card:hover .illustration {
+            filter: contrast(180%); }
       body #events .container .one h2 {
         color: gold; }
       body #events .container .one .illustration {
@@ -177,7 +200,7 @@ body {
       body #events .container .three .illustration {
         height: 30vh;
         width: 100%;
-        background-image: url("http://st2.depositphotos.com/2215072/6373/v/170/depositphotos_63732503-stock-illustration-vector-bridge-flat-icon.jpg");
+        background-image: url("https://previews.123rf.com/images/vectorpro/vectorpro1501/vectorpro150100100/35997711-Vector-bridge-flat-icon-Stock-Vector.jpg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover; }
@@ -237,10 +260,13 @@ body {
       color: grey;
       margin: 15vh auto;
       max-width: 80%;
-      border-radius: 3px; }
+      border-radius: 3px;
+      box-shadow: 5px 5px 20px black; }
       body #venue .contact h1 {
         padding: 2vh 0 0 0;
         text-align: center; }
+      body #venue .contact p {
+        margin: 0.5rem 0; }
       body #venue .contact .middle {
         max-width: 80%;
         margin: 5vh auto; }
@@ -276,8 +302,62 @@ body {
               box-shadow: 0px 10px 10px -5px black;
               background: mediumspringgreen;
               color: white; }
+  body .modal-content {
+    background: #222222;
+    color: white; }
+    body .modal-content .modal-header {
+      border: none; }
+      body .modal-content .modal-header h2 {
+        color: gold;
+        text-align: center; }
+    body .modal-content .modal-body {
+      margin: 0 auto;
+      max-width: 90%; }
+      body .modal-content .modal-body h4, body .modal-content .modal-body h5, body .modal-content .modal-body p {
+        padding: 0.5rem 0; }
+      body .modal-content .modal-body .reg-fee {
+        padding: 2rem 0; }
+      body .modal-content .modal-body form {
+        padding: 1rem 0;
+        margin: 0 auto;
+        max-width: 80%; }
+        body .modal-content .modal-body form input, body .modal-content .modal-body form select {
+          width: 100%;
+          background: #525252;
+          outline: none;
+          border: none;
+          padding: 1rem 0.5rem;
+          margin: 0.5rem auto; }
+        body .modal-content .modal-body form .submit {
+          background: transparent;
+          box-shadow: 0px 2px 5px black;
+          color: slateblue;
+          width: 60%;
+          text-align: center;
+          border-radius: 1px; }
+          body .modal-content .modal-body form .submit:hover {
+            background: slateblue;
+            box-shadow: 0 10px 10px -5px black;
+            color: white; }
+      body .modal-content .modal-body .row .col-sm-4 {
+        padding: 2rem; }
+      body .modal-content .modal-body .row .member {
+        box-shadow: 0px 0px 8px black; }
+        body .modal-content .modal-body .row .member .avatar {
+          height: 15rem;
+          width: 100%;
+          background-image: url("http://68.media.tumblr.com/198b7bed92a19512c6d57bfdf7ebcb0f/tumblr_oh6c6sEiXA1qao4slo1_1280.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+    body .modal-content .modal-footer {
+      border: none;
+      padding: 0.25rem 0 1rem 0;
+      text-align: center; }
+      body .modal-content .modal-footer a {
+        color: crimson; }
   body footer {
-    padding: 10vh 0 2vh 0;
+    padding: 10vh 0 1vh 0;
     text-align: center;
     justify-content: center;
     background: #222222; }
@@ -285,11 +365,25 @@ body {
       color: gold;
       font-weight: 700;
       line-height: 5rem; }
-    body footer .icons a {
-      padding: 5px; }
+    body footer .icons {
+      padding: 2.5rem 0; }
+      body footer .icons a {
+        padding: 2rem; }
+        body footer .icons a svg {
+          height: 5rem;
+          width: 5rem;
+          background: white;
+          box-shadow: 0px 0px 7px -2px black;
+          border-radius: 5px; }
+          body footer .icons a svg path {
+            fill: salmon; }
+          body footer .icons a svg:hover {
+            box-shadow: 0px 5px 10px -3px black; }
+      body footer .icons .yt svg {
+        background: crimson; }
     body footer .copyright {
       margin: 0 auto;
-      max-width: 600px; }
+      max-width: 70%; }
       body footer .copyright p {
         color: grey; }
       body footer .copyright span {

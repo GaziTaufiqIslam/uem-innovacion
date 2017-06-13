@@ -31,20 +31,31 @@ body
           style: italic
       ul
         li
+          padding-top: 15px
           a
             color: $light-text
-            height: 60px
+            //height: 60px
             padding:
-              top: 30px
-              bottom: 30px
+              top: 15px
+              bottom: 15px
             font-size: 14px
             font-weight: 700
             text-transform: uppercase
+            transition: all 100ms ease-out
             &:hover
               color: $bold-text
+          .register
+            color: $yellow
+            padding: 15px 30px
+            box-shadow: 0px -1px 5px -1px black
+            transition: all 300ms ease-in-out
+            &:hover
+              background: $yellow
+              color: white
+              box-shadow: 2px 10px 10px -5px black
           &:nth-child(1)
             a:hover
-              border-bottom: 2px solid $red
+              border-bottom: 2px solid $green
           &:nth-child(2)
             a:hover
               border-bottom: 2px solid $violet
@@ -103,6 +114,9 @@ body
       border-radius: 2px
       box-shadow: 0px -2px 7px black
       transition: all 300ms ease-in-out
+      &:focus
+        text-decoration: none !important
+        color: $red
       &:hover
         background: $red
         color: white
@@ -124,7 +138,7 @@ body
       h1
         font-size: 5rem
         font-weight: 700
-        color: $yellow
+        color: $green
         line-height: 7rem
         text-transform: uppercase
         text-shadow: 2px 2px 2px grey
@@ -161,6 +175,7 @@ body
         width: 100%
         box-shadow: 0px 0px 7px black
         background: $dark-bg
+        +transition
         h2
           text-align: center
           line-height: 4vh
@@ -168,6 +183,8 @@ body
           color: $bold-text
         &:hover
           box-shadow: 0px 15px 50px -10px black
+          .illustration
+            filter: contrast(180%)
 
       .one
         h2
@@ -206,7 +223,7 @@ body
           height: 30vh
           width: 100%
           background:
-            image: url("http://st2.depositphotos.com/2215072/6373/v/170/depositphotos_63732503-stock-illustration-vector-bridge-flat-icon.jpg")
+            image: url("https://previews.123rf.com/images/vectorpro/vectorpro1501/vectorpro150100100/35997711-Vector-bridge-flat-icon-Stock-Vector.jpg")
             repeat: no-repeat
             position: center center
             size: cover
@@ -275,9 +292,12 @@ body
       margin: 15vh auto
       max-width: 80%
       border-radius: 3px
+      box-shadow: 5px 5px 20px black
       h1
         padding: 2vh 0 0 0
         text-align: center
+      p
+        margin: 0.5rem 0
       .middle
         max-width: 80%
         margin: 5vh auto
@@ -313,9 +333,74 @@ body
               box-shadow: 0px 10px 10px -5px black
               background: $green
               color: white
+  .modal-content
+    background: transparentize($dark-bg, 0.0)
+    color: $bold-text
+
+    .modal-header
+      border: none
+      h2
+        color: $yellow
+        text-align: center
+    .modal-body
+      margin: 0 auto
+      max-width: 90%
+      h4, h5, p
+        padding: 0.5rem 0
+      .reg-fee
+        padding: 2rem 0
+
+      form
+        padding: 1rem 0
+        margin: 0 auto
+        max-width: 80%
+        input, select
+          width: 100%
+          background: $light-bg
+          outline: none
+          border: none
+          padding: 1rem 0.5rem
+          margin: 0.5rem auto
+        .submit
+          background: transparent
+          box-shadow: 0px 2px 5px black
+          color: $violet
+          width: 60%
+          text-align: center
+          border-radius: 1px
+          &:hover
+            background: $violet
+            box-shadow: 0 10px 10px -5px black
+            color: white
+      .row
+        .col-sm-4
+          padding: 2rem
+        .member
+
+          box-shadow: 0px 0px 8px black
+          .avatar
+            height: 15rem
+            width: 100%
+            background:
+              image: url("http://68.media.tumblr.com/198b7bed92a19512c6d57bfdf7ebcb0f/tumblr_oh6c6sEiXA1qao4slo1_1280.jpg")
+              position: center
+              size: cover
+              repeat: no-repeat
+
+    .modal-footer
+      border: none
+      padding: 0.25rem 0 1rem 0
+      text-align: center
+      a
+        color: $red
+
+
+
+
+
 
   footer
-    padding: 10vh 0 2vh 0
+    padding: 10vh 0 1vh 0
     text-align: center
     justify-content: center
     background: $dark-bg
@@ -325,11 +410,26 @@ body
         weight: 700
       line-height: 5rem
     .icons
+      padding: 2.5rem 0
       a
-        padding: 5px
+        padding: 2rem
+        svg
+          +size(5rem)
+          background: white
+          box-shadow: 0px 0px 7px -2px black
+          border-radius: 5px
+          //padding: 0.75rem
+          path
+            fill: $orange
+          &:hover
+            box-shadow: 0px 5px 10px -3px black
+      .yt
+        svg
+          background: $red
+
     .copyright
       margin: 0 auto
-      max-width: 600px
+      max-width: 70%
       p
         color: $text
       span
