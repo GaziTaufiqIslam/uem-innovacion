@@ -49,6 +49,9 @@ body {
         border-bottom: 2px solid dodgerblue; }
       body .navbar .container-fluid ul li:nth-child(5) a:hover {
         border-bottom: 2px solid salmon; }
+    @media screen and (max-width: 800px) {
+      body .navbar .navbar {
+        background: #323232; } }
   body .hiddenNav {
     background: transparent; }
   body .thick {

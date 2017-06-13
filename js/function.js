@@ -37,7 +37,10 @@ $('.navbar').removeClass('hiddenNav');
     }
   });
 
+  $(".navbar-toggle").on("click", function() {
+      $(".navbar-collapse").css({"background":"#323232"});
 
+    });
 
 //new code
 
