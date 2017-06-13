@@ -108,7 +108,6 @@ body
         color: white
         box-shadow: 0px 20px 20px -15px black
   #about
-    height: 100vh
     background: white
     position: relative
     //background:
@@ -119,17 +118,18 @@ body
     .container
       margin: 0 auto
       max-width: 600px
-      padding-top: 18vh
+      padding: 18vh 0
 
 
       h1
         font-size: 5rem
         font-weight: 700
         color: $yellow
-        line-height: 10rem
+        line-height: 7rem
         text-transform: uppercase
         text-shadow: 2px 2px 2px grey
       p
+        padding-top: 2rem
         font:
           size: 20px
         color: $text
@@ -154,10 +154,12 @@ body
         text-align: center
         padding: 3rem 0
         color: $text
+      .col-sm-4
+        padding-top: 2vh
       .card
         height: 50vh
         width: 100%
-        box-shadow: 0px 3px 10px -2px black
+        box-shadow: 0px 0px 7px black
         background: $dark-bg
         h2
           text-align: center
@@ -165,7 +167,7 @@ body
           padding: 8vh 0
           color: $bold-text
         &:hover
-          box-shadow: 0px 15px 30px -15px black
+          box-shadow: 0px 15px 50px -10px black
 
       .one
         h2
@@ -178,6 +180,10 @@ body
             repeat: no-repeat
             position: center center
             size: cover
+        &:hover
+          background: $yellow
+          h2
+            color: white
       .two
         h2
           color: $red
@@ -189,6 +195,10 @@ body
             repeat: no-repeat
             position: center center
             size: cover
+        &:hover
+          background: $red
+          h2
+            color: white
       .three
         h2
           color: $blue
@@ -200,6 +210,10 @@ body
             repeat: no-repeat
             position: center center
             size: cover
+        &:hover
+          background: $blue
+          h2
+            color: white
       .four
         h2
           color: $orange
@@ -211,6 +225,10 @@ body
             repeat: no-repeat
             position: center center
             size: cover
+        &:hover
+          background: $orange
+          h2
+            color: white
       .five
         h2
           color: $pink
@@ -222,6 +240,10 @@ body
             repeat: no-repeat
             position: center center
             size: cover
+        &:hover
+          background: $pink
+          h2
+            color: white
       .six
         h2
           color: $green
@@ -233,6 +255,10 @@ body
             repeat: no-repeat
             position: center center
             size: cover
+        &:hover
+          background: $green
+          h2
+            color: white
 
   #venue
     height: 100vh
