@@ -114,7 +114,8 @@ body {
         box-shadow: 0px 20px 20px -15px black; }
   body #about {
     background: white;
-    position: relative; }
+    position: relative;
+    background-attachment: fixed; }
     body #about .container {
       margin: 0 auto;
       max-width: 600px;

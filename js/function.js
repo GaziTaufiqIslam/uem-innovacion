@@ -32,7 +32,7 @@ $('.navbar').removeClass('hiddenNav');
     }
 
     if(wScroll > $('#about').offset().top-($(window).height())){
-      $('#about').css({'background-position': 'center '+(-200-(wScroll-($('#about').offset().top)*1.25)/7)+'px'})
+      $('#about').css({'background-position': (-200-(wScroll-($('#about').offset().top)*1.25)/7)+'px'})
 
     }
   });
