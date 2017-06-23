@@ -4,6 +4,9 @@ particlesJS.load('particles-js',
   console.log('callback - particles.js config loaded');
 });
 
+$(window).on('load', function() {
+  $('body').addClass('loaded');
+});
 $(document).ready(function() {
   $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
@@ -43,6 +46,30 @@ $('.navbar').removeClass('hiddenNav');
     });
 
 //new code
-
+$(".navbar-collapse li a").on('click', function() {
+  $(".navbar-collapse").collapse('hide');
+});
 
 });
+
+
+//Pure javascript
+var container = document.querySelector( '#loader' );
+var palette = [ 'crimson', 'gold', 'slateblue', 'turquoise']
+var paletteIndex = 0;
+
+setInterval( function() {
+
+  // Reset spans rotation without transitions
+  container.className = 'no-transition';
+
+  // Debounce change to allow for css changes
+  setTimeout( function() {
+    container.style.color = palette[paletteIndex];
+    container.className = 'transition';
+    paletteIndex += 1;
+    paletteIndex %= palette.length;
+  }, 10 );
+
+
+}, 2500 );
