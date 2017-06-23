@@ -250,10 +250,11 @@ body {
         body #events .container .six:hover h2 {
           color: white; }
   body #venue {
-    background: pink; }
+    background: pink;
+    height: 100vh; }
     body #venue iframe {
       position: absolute;
-      height: 100%;
+      height: 105%;
       width: 100%; }
     body #venue .contact {
       width: 100%;
